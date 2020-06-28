@@ -11,7 +11,7 @@ public class DesafioApplication {
 
 		List<Integer> listaFibonacci = new ArrayList<>();
 
-		while (numeroAnterior  < 400){
+		while (numeroAnterior < 400){
 			listaFibonacci.add(numeroAnterior);
 
 			int numerosSomados = numeroAtual + numeroAnterior;
