@@ -142,6 +142,24 @@ public class DesafioMeuTimeApplicationSimpleTest {
         desafioMeuTimeApplication.buscarCapitaoDoTime(2L);
     }
 
+    @Test(expected = JogadorNaoEncontradoException.class)
+    public void deveLevantarExceptionAoBuscarNomeDoJogadorCasoJogadorNaoExista(){
+        final DesafioMeuTimeApplication desafioMeuTimeApplication = new DesafioMeuTimeApplication();
+        desafioMeuTimeApplication.buscarNomeJogador(1L);
+    }
+
+    @Test(expected = JogadorNaoEncontradoException.class)
+    public void deveLevantarExceptionAoBuscarSalarioDoJogadorCasoJogadorNaoExista(){
+        final DesafioMeuTimeApplication desafioMeuTimeApplication = new DesafioMeuTimeApplication();
+        desafioMeuTimeApplication.buscarSalarioDoJogador(1L);
+    }
+    @Test(expected = TimeNaoEncontradoException.class)
+    public void deveLevantarExceptionAoBuscarJogadorMaisVelhoCasoTimeNaoExista(){
+        final DesafioMeuTimeApplication desafioMeuTimeApplication = new DesafioMeuTimeApplication();
+        desafioMeuTimeApplication.buscarJogadorMaisVelho(1L);
+    }
+
+
     @Test(expected = IdentificadorUtilizadoException.class)
     public void deveLevantarExceptionQuandoOTimeJaExiste(){
         final DesafioMeuTimeApplication desafioMeuTimeApplication = new DesafioMeuTimeApplication();
