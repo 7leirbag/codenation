@@ -36,13 +36,13 @@ public class EstacionamentoTest {
     }
 
     @Test(expected = IllegalArgumentException.class)
-    public void deveRetorarErroQuandoIdadeNegativa() {
+    public void deveRetornarErroQuandoIdadeNegativa() {
         Motorista.builder()
                 .withIdade(-1);
     }
 
     @Test(expected = IllegalArgumentException.class)
-    public void deveRetorarErroQuandoPontosNegativos() {
+    public void deveRetornarErroQuandoPontosNegativos() {
         Motorista.builder()
                 .withPontos(-1);
     }
