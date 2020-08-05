@@ -44,8 +44,6 @@ public class DesafioMeuTimeApplication implements MeuTimeInterface {
         }
     }
 
-
-
     private void validarSeTimeExiste(Long idTime) {
         timesDeFutebol.stream().filter(x -> x.id.equals(idTime)).findAny().orElseThrow(() -> new TimeNaoEncontradoException());
     }
